@@ -1,7 +1,5 @@
 package edu.sdccd.cisc191.template;
 
-import edu.sdccd.cisc191.template.RequestMessage;
-import edu.sdccd.cisc191.template.ResponseMessage;
 import javafx.concurrent.Task;
 
 import java.io.ObjectInputStream;
