@@ -201,7 +201,7 @@ public class Graphics extends GridPane implements EventHandler<ActionEvent>, Sco
     }
 
     boolean checkMark(String mark) {
-        boolean isDone = false;
+        boolean isDone;
 
         // Horizontal
         isDone = checkDirection(0, 1, 2, mark);
