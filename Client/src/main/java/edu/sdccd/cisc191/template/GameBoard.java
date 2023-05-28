@@ -14,8 +14,8 @@ public class GameBoard extends BoardInfo {
     // prints out gameboard results
     private void printBoard() {
         System.out.println(Arrays.toString(board));
-        for (int i = 0; i < board2D.length; i++) {
-            System.out.println(Arrays.toString(board2D[i]));
+        for (int[] ints : board2D) {
+            System.out.println(Arrays.toString(ints));
         }
     }
 }

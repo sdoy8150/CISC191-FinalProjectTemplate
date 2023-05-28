@@ -17,9 +17,6 @@ import javafx.scene.text.Font;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.io.*;
-import edu.sdccd.cisc191.template.RequestMessage;
-import edu.sdccd.cisc191.template.ResponseMessage;
-import edu.sdccd.cisc191.template.NetworkClient;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -208,7 +205,7 @@ public class Graphics extends GridPane implements EventHandler<ActionEvent>, Sco
     }
 
     boolean checkMark(String mark) {
-        boolean isDone = false;
+        boolean isDone;
 
         // Horizontal
         isDone = checkDirection(0, 1, 2, mark);
@@ -258,9 +255,7 @@ public class Graphics extends GridPane implements EventHandler<ActionEvent>, Sco
             System.out.println("Player 1 wins!\n" + response.getData());
             saveScores(); // Save scores after updating
         });
-        task.setOnFailed(e -> {
-            System.out.println("Error updating Player 1 score");
-        });
+        task.setOnFailed(e -> System.out.println("Error updating Player 1 score"));
         new Thread(task).start();
     }
 
@@ -275,9 +270,7 @@ public class Graphics extends GridPane implements EventHandler<ActionEvent>, Sco
             System.out.println("Player 2 wins!\n" + response.getData());
             saveScores(); // Save scores after updating
         });
-        task.setOnFailed(e -> {
-            System.out.println("Error updating Player 2 score");
-        });
+        task.setOnFailed(e -> System.out.println("Error updating Player 2 score"));
         new Thread(task).start();
     }
 
